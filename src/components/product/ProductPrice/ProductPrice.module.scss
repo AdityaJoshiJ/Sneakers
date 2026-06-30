@@ -1,0 +1,6 @@
+@use '../../../styles/variables' as *;
+
+.price {
+  font-weight: 700;
+  color: var(--color-primary);
+}

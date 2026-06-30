@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as *;
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.categoryPriceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.category {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+
+  @media (max-width: 767px) {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--color-star);
+}
+
+.starFilled {
+  width: 18px;
+  height: 18px;
+}
+
+.starEmpty {
+  width: 18px;
+  height: 18px;
+  color: var(--border-color);
+}
+
+.rate {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}

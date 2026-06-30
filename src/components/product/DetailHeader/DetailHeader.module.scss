@@ -1,0 +1,61 @@
+@use '../../../styles/variables' as *;
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.backButton,
+.wishlistButton {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition:
+    color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    fill 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wishlisted {
+  color: #ef4444 !important;
+  fill: #ef4444 !important;
+  transform: scale(1.1);
+}
+
+.wishlistButton:active .icon {
+  transform: scale(1.3);
+}

@@ -1,0 +1,40 @@
+@use '../../../styles/variables' as *;
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-white);
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+}
+

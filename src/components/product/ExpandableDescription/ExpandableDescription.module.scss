@@ -1,0 +1,66 @@
+@use '../../../styles/variables' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d8d8dd;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.collapsed {
+  @media (max-width: 767px) {
+    max-height: 4.8rem; // 3 lines of text (1.6rem * 3)
+    overflow: hidden;
+  }
+}
+
+.expanded {
+  @media (max-width: 767px) {
+    max-height: 500px; // Safely transitions to large enough height
+  }
+}
+
+.fade {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.8rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    pointer-events: none;
+  }
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.5rem 0 0 0;
+  align-self: flex-start;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

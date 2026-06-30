@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.emoji {
+  font-size: 1.15rem;
+}
+
+.label {
+  display: none;
+
+  @media (min-width: 480px) {
+    display: inline;
+  }
+}
+
+.count {
+  color: var(--color-primary);
+}

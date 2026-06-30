@@ -1,0 +1,13 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/reset';
+@use '../styles/base';
+
+// Any layout-wide specific adjustments can go here.
+// The variables and mixins are imported and ready for use in other component SCSS modules.
+
+main {
+  @media (max-width: 767px) {
+    padding-bottom: 80px; // Prevent fixed BottomNav overlap
+  }
+}
