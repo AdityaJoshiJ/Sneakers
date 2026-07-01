@@ -12,6 +12,8 @@ export async function fetchJson<T>(url: string, options?: RequestInit): Promise<
   try {
     const response = await fetch(url, options);
 
+    console.log("RES", response);
+
     if (!response.ok) {
       let payload: unknown;
       try {
