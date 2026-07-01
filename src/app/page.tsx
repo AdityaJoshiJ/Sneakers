@@ -5,6 +5,8 @@ import ProductCatalog from '../components/product/ProductCatalog';
 import ErrorState from '../components/common/ErrorState';
 import BottomNav from '../components/layout/BottomNav';
 
+export const revalidate = 60
+
 export default async function Home() {
   // Fetch products and categories concurrently in a resilient manner
   const [productsResult, categoriesResult] = await Promise.allSettled([
